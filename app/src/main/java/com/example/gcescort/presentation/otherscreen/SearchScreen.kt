@@ -69,7 +69,7 @@ fun SearchScreen(
         if(userSearch.value.isNotEmpty()) {
           items(
             users.filter { user ->
-              user.name.first.lowercase().contains(userSearch.value)
+              user.name.first.lowercase().contains(userSearch.value.lowercase())
             }.sortedBy { user -> user.name.first }
           ) { user ->
             UserItems(
